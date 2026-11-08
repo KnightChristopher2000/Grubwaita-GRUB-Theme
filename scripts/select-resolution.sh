@@ -136,7 +136,7 @@ fi
 
 # Most GRUB versions source /etc/default/grub; some source additional .cfg
 # drop-ins afterward. Refuse a conflicting theme assignment rather than
-# incorrectly claiming installation succeeded.
+# incorrectly claiming that the installation succeeded.
 for snippet in /etc/default/grub.d/*.cfg; do
   [[ -f "$snippet" ]] || continue
   if [[ "$snippet" == "$LEGACY" && "$MIGRATE_LEGACY" == 1 ]]; then continue; fi
