@@ -122,7 +122,7 @@ LEGACY='/etc/default/grub.d/90-grubwaita.cfg'
 [[ ! -e "$DEST" || -d "$DEST" ]] || fail "Non-directory theme destination: $DEST"
 [[ ! -L "$FONT_HELPER" ]] || fail "Refusing a symlink helper: $FONT_HELPER"
 
-# Older Grubwaita releases used a drop-in file. Migrate only that exact file;
+# An older Grubwaita release used a drop-in file. Migrate only that exact file;
 # otherwise refuse to alter a user-owned file with the same filename.
 MIGRATE_LEGACY=0
 if [[ -e "$LEGACY" ]]; then
